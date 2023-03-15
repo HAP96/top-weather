@@ -8,7 +8,22 @@
     <link rel='stylesheet' href="./styles.css">
 </head>
 <body>
-    <div id="main"></div>
+    <div id="main">
+        <header>
+            <div class="city">Phoenix, Arizona</div>
+            <div class="date">Thursday, 16th Mar '23</div>
+            <div class="time">4:09am</div>
+        </header>
+        <div id="details">
+            <h1 class="temp">41 C</h1>
+            <div class="img"></div>
+            <div class="img-text">Broken Clouds</div>
+        </div>
+        <div id="ui">
+            <input type="text" id="city" name="city" required placeholder="Phoenix" autocomplete="off">
+            <button id="btn">Submit</button>
+        </div>
+    </div>
     <script src="./main.js"></script>
 </body>
 </html>
