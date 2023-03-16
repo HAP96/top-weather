@@ -18,7 +18,7 @@ body {
 #container{
     position: relative;
     width: 400px;
-    height: 605px;
+    height: 105px;
     background: #fff;
     padding: 28px 32px;
     overflow: hidden;
@@ -43,7 +43,6 @@ body {
     text-transform: capitalize;
     padding-left: 32px;
     text-align: center;
-    text-decoration: underline;
 }
 
 .search input::placeholder{
@@ -112,4 +111,27 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#error-img{
+  height: 200px ;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.error-text {
+    text-align: center;
+    margin-top: 20px;
 }

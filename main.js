@@ -1,5 +1,9 @@
 // b063de98f432135a9d33ed7a5d25fa86
 // https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+const weatherBox = document.querySelector('.weather-box');
+const details = document.querySelector('.details');
+const container = document.getElementById('container');
+const error = document.querySelector('.error');
 
 async function getWeather() {
   let city = document.getElementById('city').value;
@@ -10,6 +14,15 @@ async function getWeather() {
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${APIKey}`
   );
   const data = await weather.json();
+  error.style.display = 'none';
+  error.classList.remove('fadein');
+  if (data.main === undefined) {
+    container.style.height = '400px';
+    weatherBox.style.display = 'none';
+    details.style.display = 'none';
+    error.style.display = 'flex';
+    error.classList.add('fadein');
+  }
 
   const temp = document.querySelector('.temperature');
   temp.textContent = `${data.main.temp.toFixed()}°F`;
@@ -36,6 +49,12 @@ async function getWeather() {
   } else {
     img.src = 'images/mist.png';
   }
+
+  weatherBox.style.display = '';
+  details.style.display = '';
+  weatherBox.classList.add('fadein');
+  details.classList.add('fadein');
+  container.style.height = '600px';
 }
 
 const btn = document.getElementById('btn');
