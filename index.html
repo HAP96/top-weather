@@ -6,24 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel='stylesheet' href="./styles.css">
+    <link rel="shortcut icon" href="#">
 </head>
 <body>
-    <div id="main">
-        <header>
-            <div class="city">Phoenix, Arizona</div>
-            <div class="date">Thursday, 16th Mar '23</div>
-            <div class="time">4:09am</div>
-        </header>
-        <div id="details">
-            <h1 class="temp">41 C</h1>
-            <div class="img"></div>
-            <div class="img-text">Broken Clouds</div>
+    <div id="container">
+        <div class="search">
+            <i class="fa-solid fa-location-dot" id="test"></i>
+            <input type="text" name="city" id="city" required autocomplete="off" placeholder="Enter Your Location">
+            <button class="fa-solid fa-magnifying-glass"></button>
         </div>
-        <div id="ui">
-            <input type="text" id="city" name="city" required placeholder="Phoenix" autocomplete="off">
-            <button id="btn">Submit</button>
+        <div class="weather-box">
+            <img src="" id="weather-img">
+            <div class="temperature">74</div>
+            <div class="description">Cloudy</div>
+        </div>
+        <div class="details">
+            <div class="humidity">
+                <div class="humidity-value">Humidity:</div>
+                <div class="humidity-value">70</div>
+                <i class="fa-solid fa-water"></i>
+            </div>
+            <div class="win">
+                <div class="wind-speed">Wind Speed:</div>
+                <div class="wind-value">8mph</div>
+                <i class="fa-solid fa-wind"></i>
+            </div>
         </div>
     </div>
     <script src="./main.js"></script>
+    <script src="https://kit.fontawesome.com/59f8f4f62a.js" crossorigin="anonymous"></script>
 </body>
 </html>
